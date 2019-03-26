@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ewU-0g-2YJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nOD-MX-zRe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--FRUITS-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shopping" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ItemViewController" id="BYZ-38-t0r" customClass="ItemViewController" customModule="Shopping" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,7 +46,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="FRUITS" id="9aL-se-r5C"/>
+                    <navigationItem key="navigationItem" title="FRUITS" id="9aL-se-r5C">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="LSe-5d-mZL">
+                            <connections>
+                                <action selector="toHome:" destination="BYZ-38-t0r" id="kQv-6D-qYZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,7 +74,37 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pfi-v1-7S7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="133"/>
+            <point key="canvasLocation" x="342" y="134"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="vcY-4r-HBk">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="nOD-MX-zRe" customClass="HomeViewController" customModule="Shopping" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gar-Bp-nkc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVJ-Zd-0Iu">
+                                <rect key="frame" x="152" y="206" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button:" destination="nOD-MX-zRe" eventType="touchUpInside" id="CrN-Sn-vUQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sel-JQ-pa1"/>
+                    </view>
+                    <connections>
+                        <segue destination="ewU-0g-2YJ" kind="popoverPresentation" identifier="toItem" popoverAnchorView="gar-Bp-nkc" id="rr0-HC-h5w">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Df7-nu-LBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-412" y="133.5832083958021"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="H5o-J4-X4r">
@@ -104,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3k4-7T-bRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2047" y="133"/>
+            <point key="canvasLocation" x="1876" y="459"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="xVe-Ae-ODH">
@@ -146,8 +182,8 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-chuck-thumbs" translatesAutoresizingMaskIntoConstraints="NO" id="cnP-cp-ukt">
                                                     <rect key="frame" x="15" y="548" width="77" height="50"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pink-chuck-thumbs" translatesAutoresizingMaskIntoConstraints="NO" id="O38-E0-vFf">
-                                                    <rect key="frame" x="100" y="474" width="77" height="50"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red-chuck-thumbs" translatesAutoresizingMaskIntoConstraints="NO" id="bEv-bq-lTg">
+                                                    <rect key="frame" x="15" y="474" width="77" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue-chuck-thumbs" translatesAutoresizingMaskIntoConstraints="NO" id="lTb-uS-7BP">
@@ -430,6 +466,14 @@
                                                         <constraint firstItem="biZ-ug-Owp" firstAttribute="leading" secondItem="w3y-V0-QMk" secondAttribute="leadingMargin" id="ytY-fP-1ja"/>
                                                     </constraints>
                                                 </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7n-d1-PVJ">
+                                                    <rect key="frame" x="100" y="474" width="77" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button" image="pink-chuck-thumbs"/>
+                                                    <connections>
+                                                        <segue destination="cEg-iu-JQt" kind="presentation" id="HY8-Hh-4vz"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="qw7-IY-Dzy" firstAttribute="leading" secondItem="w3y-V0-QMk" secondAttribute="leading" id="J29-NG-uNu"/>
@@ -626,6 +670,32 @@ Proin tortor arcu, semper vitae blandit pharetra, efficitur eu purus. Sed pharet
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOp-NS-zoL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1876" y="107"/>
+        </scene>
+        <!--Pop UpVC-->
+        <scene sceneID="l7T-08-x8N">
+            <objects>
+                <viewController storyboardIdentifier="PopUpVC" id="cEg-iu-JQt" customClass="PopUpVC" customModule="Shopping" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="knN-r7-lIy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu6-OS-gCS">
+                                <rect key="frame" x="0.0" y="183" width="429" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pink-chucks"/>
+                                <connections>
+                                    <action selector="closePop:" destination="cEg-iu-JQt" eventType="touchUpInside" id="mGb-UX-OjK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="A6B-AZ-DlD"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rgr-KT-3WO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560" y="140"/>
         </scene>
     </scenes>
     <resources>
@@ -636,6 +706,7 @@ Proin tortor arcu, semper vitae blandit pharetra, efficitur eu purus. Sed pharet
         <image name="mn-hoodie2" width="118" height="172"/>
         <image name="outstock-bg" width="40" height="40"/>
         <image name="pink-chuck-thumbs" width="77" height="50"/>
+        <image name="pink-chucks" width="375" height="300"/>
         <image name="red-chuck-thumbs" width="77" height="50"/>
         <image name="red-chucks" width="375" height="300"/>
         <image name="slash" width="40" height="40"/>
