@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nOD-MX-zRe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qmo-uL-s1V">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -76,35 +76,92 @@
             </objects>
             <point key="canvasLocation" x="342" y="134"/>
         </scene>
-        <!--Home View Controller-->
-        <scene sceneID="vcY-4r-HBk">
+        <!--Shop Item Table View Controller-->
+        <scene sceneID="Qdc-DO-cdX">
             <objects>
-                <viewController storyboardIdentifier="HomeViewController" id="nOD-MX-zRe" customClass="HomeViewController" customModule="Shopping" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="gar-Bp-nkc">
+                <tableViewController id="Qmo-uL-s1V" customClass="ShopItemTableViewController" customModule="Shopping" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="jNR-y9-vN2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVJ-Zd-0Iu">
-                                <rect key="frame" x="152" y="206" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="button:" destination="nOD-MX-zRe" eventType="touchUpInside" id="CrN-Sn-vUQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="sel-JQ-pa1"/>
-                    </view>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShopTableViewCell" rowHeight="90" id="10I-nZ-PZ2" customClass="ShopTableViewCell" customModule="Shopping" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="10I-nZ-PZ2" id="Bcx-gc-MJA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="U45-QV-5sD">
+                                            <rect key="frame" x="0.0" y="0.0" width="216.5" height="89.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red-chuck-thumbs" translatesAutoresizingMaskIntoConstraints="NO" id="Pdr-QA-ToM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="89.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="110" id="8Qd-3a-6zP"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pTL-HL-hpo">
+                                                    <rect key="frame" x="120" y="0.0" width="96.5" height="89.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="BANANA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y8E-cv-jm7">
+                                                            <rect key="frame" x="0.0" y="0.0" width="96.5" height="54"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="30"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2.50" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IR-UK-fW4">
+                                                            <rect key="frame" x="0.0" y="62" width="54" height="27.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="54" id="8tM-kI-Ft4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="0IR-UK-fW4" firstAttribute="leading" secondItem="pTL-HL-hpo" secondAttribute="leading" id="20a-oB-NhA"/>
+                                                        <constraint firstItem="0IR-UK-fW4" firstAttribute="top" secondItem="y8E-cv-jm7" secondAttribute="bottom" constant="8" id="AwP-BJ-AV2"/>
+                                                        <constraint firstAttribute="bottom" secondItem="0IR-UK-fW4" secondAttribute="bottom" id="Oa7-BQ-kBG"/>
+                                                        <constraint firstAttribute="trailing" secondItem="y8E-cv-jm7" secondAttribute="trailing" id="khe-CB-5hj"/>
+                                                        <constraint firstItem="y8E-cv-jm7" firstAttribute="leading" secondItem="pTL-HL-hpo" secondAttribute="leading" id="lok-6L-H9G"/>
+                                                        <constraint firstItem="y8E-cv-jm7" firstAttribute="top" secondItem="pTL-HL-hpo" secondAttribute="top" id="vAB-58-iSY"/>
+                                                        <constraint firstItem="0IR-UK-fW4" firstAttribute="top" secondItem="y8E-cv-jm7" secondAttribute="bottom" constant="8" id="wcR-jf-4wu"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="U45-QV-5sD" firstAttribute="leading" secondItem="Bcx-gc-MJA" secondAttribute="leading" id="elb-f1-dcX"/>
+                                        <constraint firstAttribute="bottom" secondItem="U45-QV-5sD" secondAttribute="bottom" id="nTi-TC-ec8"/>
+                                        <constraint firstItem="U45-QV-5sD" firstAttribute="top" secondItem="Bcx-gc-MJA" secondAttribute="top" id="vjg-JF-NNo"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="itemName" destination="y8E-cv-jm7" id="lTw-8s-Qrk"/>
+                                    <outlet property="itemPrice" destination="0IR-UK-fW4" id="of4-jJ-J7S"/>
+                                    <outlet property="photo" destination="Pdr-QA-ToM" id="CuI-C0-WFy"/>
+                                    <outletCollection property="gestureRecognizers" destination="wnp-ay-9YS" appends="YES" id="BpX-Dy-2SL"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Qmo-uL-s1V" id="F54-4p-WUD"/>
+                            <outlet property="delegate" destination="Qmo-uL-s1V" id="FIg-g5-3k6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VXl-b5-gJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wnp-ay-9YS">
                     <connections>
-                        <segue destination="ewU-0g-2YJ" kind="popoverPresentation" identifier="toItem" popoverAnchorView="gar-Bp-nkc" id="rr0-HC-h5w">
-                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                        </segue>
+                        <segue destination="ewU-0g-2YJ" kind="presentation" id="TPo-jf-gyj"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Df7-nu-LBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-412" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-415.19999999999999" y="139.880059970015"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="H5o-J4-X4r">

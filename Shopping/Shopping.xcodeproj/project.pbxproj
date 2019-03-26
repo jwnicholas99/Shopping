@@ -16,6 +16,9 @@
 		8AEED4492249DA3A00403F14 /* ShoppingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEED4482249DA3A00403F14 /* ShoppingUITests.swift */; };
 		8AEED457224A696A00403F14 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEED456224A696A00403F14 /* HomeViewController.swift */; };
 		8AEED45B224A84E200403F14 /* PopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEED45A224A84E200403F14 /* PopUpVC.swift */; };
+		8AEED45D224A93C700403F14 /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEED45C224A93C700403F14 /* ShopTableViewCell.swift */; };
+		8AEED45F224A9CCC00403F14 /* ShopItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEED45E224A9CCC00403F14 /* ShopItemTableViewController.swift */; };
+		8AEED463224A9DC900403F14 /* ShopItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEED462224A9DC900403F14 /* ShopItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		8AEED44A2249DA3A00403F14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8AEED456224A696A00403F14 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8AEED45A224A84E200403F14 /* PopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpVC.swift; sourceTree = "<group>"; };
+		8AEED45C224A93C700403F14 /* ShopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
+		8AEED45E224A9CCC00403F14 /* ShopItemTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItemTableViewController.swift; sourceTree = "<group>"; };
+		8AEED462224A9DC900403F14 /* ShopItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,10 @@
 			children = (
 				8AEED4282249DA3900403F14 /* AppDelegate.swift */,
 				8AEED456224A696A00403F14 /* HomeViewController.swift */,
+				8AEED45E224A9CCC00403F14 /* ShopItemTableViewController.swift */,
+				8AEED45C224A93C700403F14 /* ShopTableViewCell.swift */,
 				8AEED42A2249DA3900403F14 /* ItemViewController.swift */,
+				8AEED462224A9DC900403F14 /* ShopItem.swift */,
 				8AEED45A224A84E200403F14 /* PopUpVC.swift */,
 				8AEED42C2249DA3900403F14 /* Main.storyboard */,
 				8AEED42F2249DA3A00403F14 /* Assets.xcassets */,
@@ -262,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AEED45D224A93C700403F14 /* ShopTableViewCell.swift in Sources */,
 				8AEED42B2249DA3900403F14 /* ItemViewController.swift in Sources */,
+				8AEED463224A9DC900403F14 /* ShopItem.swift in Sources */,
 				8AEED45B224A84E200403F14 /* PopUpVC.swift in Sources */,
 				8AEED4292249DA3900403F14 /* AppDelegate.swift in Sources */,
+				8AEED45F224A9CCC00403F14 /* ShopItemTableViewController.swift in Sources */,
 				8AEED457224A696A00403F14 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
